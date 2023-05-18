@@ -8,6 +8,10 @@ type cube struct {
 	edge float64
 } // edge x edge x edge
 
+func (c cube) Volume() float64 {
+	return c.edge * c.edge * c.edge
+}
+
 type triangularPrism struct {
 	base     float64
 	attitude float64
