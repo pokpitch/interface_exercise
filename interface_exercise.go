@@ -18,6 +18,10 @@ type triangularPrism struct {
 	height   float64
 } // 0.5 x base x attitude x height
 
+func (t triangularPrism) Volume() float64 {
+	return 0.5 * t.base * t.attitude * t.height
+}
+
 func VolumeOf(v volumer) float64 {
 	return v.Volume()
 }
